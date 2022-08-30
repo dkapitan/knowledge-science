@@ -1,13 +1,20 @@
 ---
 title: "The Return of the Knowledge Scientist"
-subtitle: "A revised curriculum to pay off the data debt of organizations and democratize data"
-author: "Daniel Kapitan, Joran Lokkerbol, George Fletcher"
-date: "8th July 2022"
+subtitle: "An integrative curriculum to unlock the data-driven organization"
+author: "Daniel Kapitan, Joran Lokkerbol, George Fletcher, Paul Groth, Juan Sequeda"
+date: "01 September 2022"
 format:
-    pdf: default
+    pdf: 
+      documentclass: article
+      fontfamily: libertinus
     html: 
       self-contained: true
 
+tbl-cap-location: bottom
+fig-cap-location: bottom
+crossref: 
+  fig-prefix: figure
+  tbl-prefix: table
 reference-location: margin
 citation-location: margin
 bibliography: knowledge-science.bib
@@ -16,17 +23,38 @@ bibliography: knowledge-science.bib
 
 ## Introduction
 
-Building on our knowledge science manifesto [@fletcher2020knowledge] we expand our view on why such a role is required, how nacent knowledge science practices are currently conducted in different domains, and what a revised curriculum looks like. First we sketch current challenges in data-driven innovation: what are key challenges, both from academic research and industry practices. Second, we analyze two cases of nascent knowledge science practises. By examining these practices we aim to distill generic patterns to inform how a revised knowledge science curriculum should look like. Finally, we lay out the revised knowledge science curriculum.
-
-## Current trends and challenges in data-drive innovation
-
-As laid out in @fletcher2020knowledge there is a clear need to improve reliance on data to unlock data-driven organization, unpacking it in five properties:
+In our appeal for the return of the Knowledge Scientist (@fletcher2020knowledge) we have argued the need to improve reliance on data to unlock data-driven organization. In our view, to 'rely on data' can be unpacked into the following five properties:
 
 1. Reliable data is clean data.
 2. Reliable data is grounded in shared meaning spaces.
 3. Reliable data is data in context. Clean data with shared meaning is not enough.
 4. Reliable data is data accessible in a standardized format.
 5. Reliable data is maintained.
+
+We have argued that the lost art of knowledge identification, knowledge elicitation and knowledge specification needs to be reinstated in industry to complement current data science practices. We have called for a return of the knowledge scientist in organizations, development of new courses for educating knowledge scientists and research to study the tripartite relationship between data/knowledge models, their corresponding query languages and the people both using and producing reliable data.
+
+In this paper, we outline an integrative curriculum for a post-graduate course on knowledge science, thereby rising to our own call. Given that a knowledge scientists needs a diverse set of skills, ranging from data engineering, knowledge acquisition, machine learning and human-computer interactions, we evaluate the different frameworks and concepts that are commonly used for teaching each of these discplines. We subsequently propose how these frameworks can conceptually  integrated into a cohesive and logical curriculum. Finally, we discuss the feasibility of the proposed curriculum by reflecting on nascent knowledge science practice in Dutch government and healthcare organizations. These reflections are based on our experience with Professional Education at Jheronimus Academy of Data Science (JADS PE) and our work in advising organizations on unlocking the data-driven organization, particularly for government and healthcare.
+
+## Overview of relevant frameworks
+
+Our first challenge in defining a knowledge science curriculum is to arrive at a practical and meaningful scope of which existing domains and frameworks i.e. subjects are to be included. @Tbl-knowledge-science-domains lists the subjects and corresponding frameworks that we have included in our analysis.
+
+
+| Domain | Framework and/or key textbook | Relevant topics|
+|:---|:---|:-------|
+| Enterprise Architecture | [TOGAF](https://www.opengroup.org/togaf) | Business architecture, Data architecture |
+| Data Management | [DAMA-DMBOK](https://www.dama.org/cpages/body-of-knowledge) | Virtually all 10 topics of DMBOK 2 wheel (see @fig-dmbok-wheel) |
+| Knowledge Graphs | hogan2021knowledge | Foundational theory of graphs as an introduction to its specific application in e.g. fact-based modeling, property graphs etc. |
+| Information modeling | ... | Encompassed generic tools and techniques (layered models, ontologies) and domain-specific application (buildings, accounting, healthcare) |
+| Data engineering | reis2022fundamentals | Data processing pipelines, ETL/ELT, data warehousing |
+
+: Domains and frameworks included in the analysis. {#tbl-knowledge-science-domains}
+
+
+![Wheel of the Data Management Body of Knowledge (DMBOK), second edition](./images/dama-wheel-2017.png){#fig-dmbok-wheel}
+
+## Current trends and challenges in data-drive innovation
+
 
 The importance of these properties of reliable data is similar to Ng's several the appeal for a more data-centric approach to AI [@datacentric]. Data-Centric AI (DCAI) represents the recent transition from focusing on modeling to the underlying data used to train and evaluate models. Increasingly, common model architectures have begun to dominate a wide range of tasks, and predictable scaling rules have emerged. While building and using datasets has been critical to these successes, the endeavor is often artisanal -- painstaking and expensive. The community lacks high productivity and efficient open engineering tools to make building, maintaining, and evaluating datasets easier, cheaper, and more repeatable. The DCAI movement aims to address this lack of tooling, best practices, and infrastructure for managing data in modern ML systems [@neurips2021].
 

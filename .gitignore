@@ -1,1 +1,5 @@
 .quarto/*
+**/*.pptx
+.DS_Store
+
+/.quarto/
